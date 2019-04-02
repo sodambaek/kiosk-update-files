@@ -1,0 +1,65 @@
+{
+  "name": "uzyshapiskeleton",
+  "version": "0.4.0",
+  "description": "Hapi.js Application Skeleton",
+  "main": "app.js",
+  "scripts": {
+    "start": "pm2 start app.js -i max",
+    "test": "lab -C -c -m 2000 -l",
+    "debug": "node --inspect app.js",
+    "dev": "export NODE_ENV=development &&nodemon  -e js,html app.js --type=development",
+    "stop": "./node_modules/.bin/pm2 stop app.js",
+    "coverage": "if test -f './converage.html'; then  rm coverage.html; fi && lab -r html -o coverage.html",
+    "dep": "npm list --depth 0",
+    "outdated": "npm outdated --depth 0",
+    "inspector": "./node_modules/node-inspector/bin/inspector.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uzysjung/UzysHapiSkeleton.git"
+  },
+  "keywords": [
+    "Uzys",
+    "Hapi",
+    "Hapijs",
+    "Hapi.js",
+    "Node",
+    "Node.js",
+    "Skeleton"
+  ],
+  "engines": {
+    "node": ">=8.9.0"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "boom": "^7.1.1",
+    "debug": "3.1.x",
+    "handlebars": "^4.0.11",
+    "hapi": "^17.2.x",
+    "hapi-auth-basic": "^5.0.0",
+    "hapi-swagger": "^9.0.x",
+    "inert": "^5.0.1",
+    "joi": "^13.0.x",
+    "knex": "^0.14.2",
+    "lodash": "^4.17.4",
+    "mysql": "^2.15.x",
+    "scooter": "^5.0.0",
+    "vision": "^5.2.0",
+    "socket.io": "^2.0.4",
+    "socket.io-client": "^2.0.4"
+  },
+  "devDependencies": {
+    "code": "^5.1.x",
+    "lab": "^15.1.2",
+    "nodemon": "^1.12.7",
+    "eslint": "^4.13.1",
+    "eslint-config-hapi": "^11.1.0",
+    "eslint-plugin-hapi": "^4.1.0"
+  },
+  "author": "Uzysjung",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/uzysjung/UzysHapiSkeleton/issues"
+  },
+  "homepage": "https://github.com/uzysjung/UzysHapiSkeleton#readme"
+}
