@@ -23,8 +23,8 @@ class Config {
             ret = {
                 host: 'localhost',
                 user: 'root',
-                password: 'root',
-                database: 'UzysHapiSkeleton'
+                password: '1234',
+                database: 'updateFiles'
             };
         }
         return ret;
