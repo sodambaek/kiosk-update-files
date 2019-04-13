@@ -21,10 +21,14 @@ class Config {
         if (this.type === 'development') {
 
             ret = {
-                host: 'localhost',
-                user: 'root',
-                password: '1234',
-                database: 'updateFiles'
+                client: 'mysql',
+                connection: {
+                    host: 'localhost',
+                    user: 'root',
+                    password: '1234',
+                    database: 'updateFiles'
+                    },
+                pool: { min: 1, max: 5 }
             };
         }
         return ret;
