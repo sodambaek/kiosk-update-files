@@ -16,6 +16,15 @@ class otaFiles extends UzysDB {
         return rows;
     }
 
+    async findById(id) {
+        const rows = await this.knex(this.tableName)
+            .select()
+            .where('id', id);
+
+        console.log(rows);
+        return rows;
+    }
+
 }
 
 module.exports = new otaFiles('otaFiles', Config.mysql);
