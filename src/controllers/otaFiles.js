@@ -62,6 +62,16 @@ internals.deletePost = async function (request, h) {
 
 internals.updatePost = async function (request, h) {
     const id = request.params.id;
+    const data = request.query;
+
+    try{
+        let resp = await modelOtaFiles.updateById(id, data);
+
+        return resp;
+
+    } catch ( e ) {
+
+    }
 
 
 }
