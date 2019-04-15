@@ -12,7 +12,7 @@ module.exports = function () {
                 description: 'ota update file post list',
                 notes: 'OTA 업데이트 파일 게시글 리스트',
                 tags: ['api', 'files'],
-                handler: filesController.otaFiles,
+                handler: filesController.otaFilePosts,
                 // validate: ApiValidate.otaFiles
             }
         },
@@ -23,7 +23,7 @@ module.exports = function () {
                 description: 'ota update file post',
                 notes: 'OTA 업데이트 파일 게시글',
                 tags: ['api', 'post'],
-                handler: filesController.post,
+                handler: filesController.otaFilePost,
                 // validate:
             }
         },
@@ -33,10 +33,10 @@ module.exports = function () {
             config: {
                 description: 'create ota update file post',
                 notes: 'OTA 업데이트 파일 게시글 생성',
-                tags: ['api', 'create'],
-                handler: filesController.create,
+                tags: ['api', 'createPost'],
+                handler: filesController.createPost,
                 // validate:
             }
-        }
+        },
     ];
 }();

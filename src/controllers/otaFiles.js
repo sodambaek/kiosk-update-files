@@ -5,7 +5,7 @@ const _             = require('lodash');
 
 const internals = {};
 
-internals.otaFiles = async function ( request, h ) {
+internals.otaFilePosts = async function ( request, h ) {
     let resp = {};
 
     try {
@@ -19,7 +19,7 @@ internals.otaFiles = async function ( request, h ) {
     }
 }
 
-internals.post = async function ( request, h ) {
+internals.otaFilePost = async function ( request, h ) {
     let resp = {};
     const id = request.params.id;
 
@@ -34,8 +34,17 @@ internals.post = async function ( request, h ) {
     }
 }
 
-internals.create = async function (request, h) {
+internals.createPost = async function (request, h) {
+    const data = request.query;
+    try{
 
+        let resp = await modelOtaFiles.createPost(data);
+        console.log(resp);
+
+        return h.response(resp).code(201);
+    } catch ( e ) {
+
+    }
 }
 
 exports = module.exports = internals;
