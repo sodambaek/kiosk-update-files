@@ -38,5 +38,27 @@ module.exports = function () {
                 // validate:
             }
         },
+        {
+            method: 'DELETE',
+            path: '/otaFiles/{id}',
+            config: {
+                description: 'delete ota update file post',
+                notes: 'OTA 업데이트 파일 게시글 삭제',
+                tags: ['api', 'deletePost'],
+                handler: filesController.deletePost,
+                // validate:
+            }
+        },
+        {
+            method: 'PUT',
+            path: '/otaFiles/{id}',
+            config: {
+                description: 'update ota update file post',
+                notes: 'OTA 업데이트 파일 게시글 삭제',
+                tags: ['api', 'updatePost'],
+                handler: filesController.updatePost,
+                // validate:
+            }
+        }
     ];
 }();

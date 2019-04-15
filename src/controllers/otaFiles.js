@@ -47,4 +47,23 @@ internals.createPost = async function (request, h) {
     }
 }
 
+internals.deletePost = async function (request, h) {
+    const id = request.params.id;
+
+    try {
+        // success: resp=1, not exist: resp=0
+        let resp = await modelOtaFiles.deleteById(id);
+
+        return h.response(resp).code(204);
+    } catch ( e ) {
+
+    }
+}
+
+internals.updatePost = async function (request, h) {
+    const id = request.params.id;
+
+
+}
+
 exports = module.exports = internals;
