@@ -1,10 +1,9 @@
-# UzysHapiSkeleton
-[![Build Status](https://travis-ci.org/uzysjung/UzysHapiSkeleton.svg?branch=master)](https://travis-ci.org/uzysjung/UzysHapiSkeleton)
-Hapi.js MVC pattern Template
+# kiosk-update-files
+- based on UzysHapiSkeleton(https://github.com/uzysjung/UzysHapiSkeleton#uzyshapiskeleton)
+- based on Hapi.js 11.1.x Node 5.0
 
 ## Introduction
-**UzysHapiSkeleton** is a MVC pattern Skeleton
-* based on Hapi.js 11.1.x Node 5.0
+- Simple board of ota update file posts
 
 ## Hapi plugin
 - TV (endpoint: /debug/console)
