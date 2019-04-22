@@ -9,7 +9,6 @@ class otaFiles extends UzysDB {
     }
 
     async fetch() {
-
         const rows = await this.knex(this.tableName).select();
 
         console.log(rows);

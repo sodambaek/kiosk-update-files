@@ -26,7 +26,7 @@ internals.otaFilePost = async function ( request, h ) {
     try {
         let data;
         data = await modelOtaFiles.findById(id);
-        _.extend( resp, data);
+        _.extend( resp, data );
 
         return h.response(resp);
     } catch ( e ) {
@@ -43,7 +43,7 @@ internals.createPost = async function (request, h) {
 
         return h.response(resp).code(201);
     } catch ( e ) {
-
+        console.log('ERROR', resp, e);
     }
 }
 
@@ -53,10 +53,10 @@ internals.deletePost = async function (request, h) {
     try {
         // success: resp=1, not exist: resp=0
         let resp = await modelOtaFiles.deleteById(id);
-
+        console.log(resp);
         return h.response(resp).code(204);
     } catch ( e ) {
-
+        console.log('ERROR', resp, e);
     }
 }
 
@@ -65,12 +65,9 @@ internals.updatePost = async function (request, h) {
     const data = request.query;
 
     try{
-        let resp = await modelOtaFiles.updateById(id, data);
-
-        return resp;
-
+        return await modelOtaFiles.updateById(id, data);
     } catch ( e ) {
-
+        console.log('ERROR', resp, e);
     }
 
 
